@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+        <!--상단구역-->
+        <LinearLayout
+            android:id="@+id/topLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/backButton"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/white"
+                    android:shadowColor="@color/white"
+                    android:background="@android:color/transparent"
+                    android:text="←"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+                <!--android:background="@android:color/transparent" <- 희미한 테두리가 있어서 이를 없애는 코드-->
+
+                <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="105dp"
+                    android:layout_marginTop="5dp"
+                    android:text="회원가입"
+                    android:fontFamily="@font/worksans_bold"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#D2F0E4"
+            app:layout_constraintTop_toBottomOf="@+id/topLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="58dp">
+
+                <!--android:bufferType="spannable"을 넣어야 추후 액티비티 파일에서 특정 문자의 스타일을 바꿀 수 있음-->
+   음           <!--https://curryyou.tistory.com/429-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아이디 *"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="25dp"
+                    android:bufferType="spannable"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/worksans_light"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userId"
+                    android:hint=""
+                    android:inputType="text"
+                    android:background="@drawable/edit_text"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="비밀번호 *"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="25dp"
+                    android:bufferType="spannable"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/worksans_light"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userPassword"
+                    android:hint="영문, 특수문자 조합 8~15자리로 입력해주세요"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/worksans_light"
+                    android:textSize="13dp"
+                    android:inputType="textPassword"
+                    android:background="@drawable/edit_text"
+                    android:layout_marginTop="8dp"
+                    android:padding="11dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="비밀번호 확인 *"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="25dp"
+                    android:bufferType="spannable"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/worksans_light"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userPasswordCheck"
+                    android:hint="영문, 특수문자 조합 8~15자리로 입력해주세요"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/worksans_light"
+                    android:textSize="13dp"
+                    android:inputType="textPassword"
+                    android:background="@drawable/edit_text"
+                    android:layout_marginTop="8dp"
+                    android:padding="11dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이름(실명) *"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="25dp"
+                    android:bufferType="spannable"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/worksans_light"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userName"
+                    android:hint=""
+                    android:inputType="text"
+                    android:background="@drawable/edit_text"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="휴대폰 번호 *"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="25dp"
+                    android:bufferType="spannable"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/worksans_light"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userPhone"
+                    android:hint=""
+                    android:inputType="phone"
+                    android:background="@drawable/edit_text"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"/>
+
+                <Button
+                    android:id="@+id/signupButton"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/signup_button"
+                    android:text="회원가입"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/worksans_bold"/>
+
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

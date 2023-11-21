@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/topLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:fontFamily="@font/worksans_light">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:shadowColor="@color/white"
+                android:background="@android:color/transparent"
+                android:text="←"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/worksans_bold"
+                android:text="알림"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/notification_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/topLayout3"
+            android:layout_marginTop="58dp"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="#D2F0E4">
+
+            <Button
+                android:id="@+id/btnAll"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/notification_button"
+                android:textColor="#000000"
+                android:text="전체"
+                android:fontFamily="@font/worksans_light"
+                />
+
+            <Button
+                android:id="@+id/btnSchedule"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/notification_button"
+                android:textColor="#000000"
+                android:text="일정"
+                android:fontFamily="@font/worksans_light"/>
+
+            <Button
+                android:id="@+id/btnBuddy"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/notification_button"
+                android:textColor="#000000"
+                android:text="버디"
+                android:fontFamily="@font/worksans_light"/>
+
+            <Button
+                android:id="@+id/btnChat"
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/notification_button"
+                android:textColor="#000000"
+                android:text="채팅"
+                android:fontFamily="@font/worksans_light"
+                />
+
+            <Button
+                android:id="@+id/btnCommunity"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/notification_button"
+                android:textColor="#000000"
+                android:text="커뮤니티"
+                android:fontFamily="@font/worksans_light"
+                />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notificationList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/notification_Layout"
+            android:layout_alignParentBottom="true"
+            android:background="#D2F0E4"
+            android:fontFamily="@font/worksans_light"
+            />
+
+<!-- java 작성 시 아래 코드를 활용할 것-->
+<!--알림 내역을 표시할 RecyclerView에 어댑터를 설정 -->
+<!--        RecyclerView recyclerView = findViewById(R.id.notificationRecyclerView);-->
+<!--        NotificationAdapter adapter = new NotificationAdapter(notificationList); // notificationList는 알림 내역 데이터 리스트-->
+<!--        recyclerView.setAdapter(adapter);-->
+
+<!--LayoutManager 설정: RecyclerView에 표시할 아이템 배치 설정
+세로 스크롤 리스트 : LinearLayoutManager를 사용        -->
+        <!--LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+recyclerView.setLayoutManager(layoutManager);-->
+
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--상단구역-->
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
+            android:shadowColor="@color/white"
+            android:background="@android:color/transparent"
+            android:text="←"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+        <!--android:background="@android:color/transparent" <- 희미한 테두리가 있어서 이를 없애는 코드-->
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="102dp"
+            android:layout_marginTop="5dp"
+            android:text="일정 등록"
+            android:fontFamily="@font/worksans_bold"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+<!--    증감버튼 참고 사이트 https://swdevelopment.tistory.com/307-->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#D2F0E4"
+            app:layout_constraintTop_toBottomOf="@+id/topLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="58dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일정명을 입력해주세요*"
+                android:textSize="16dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:bufferType="spannable"
+                android:textColor="@color/black"
+                android:fontFamily="@font/worksans_light"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/schedulename"
+                android:hint="일정명을 입력해주세요(최대 20글자)"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/worksans_light"
+                android:textSize="13dp"
+                android:inputType="text"
+                android:background="@drawable/edit_text"
+                android:layout_marginTop="8dp"
+                android:padding="11dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="모집인원수를 선택해주세요*"
+                android:textSize="16dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:bufferType="spannable"
+                android:textColor="@color/black"
+                android:fontFamily="@font/worksans_light"/>
+
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                >
+
+                <Button
+                    android:id="@+id/countminus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ff0000"
+                    android:text="-"
+                    android:textColor="@color/black"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="#00ff0000"/>
+
+                <Button
+                    android:id="@+id/countplus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ff0000"
+                    android:text="+"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="최대 8명까지 가능합니다"
+                android:textColor="@color/black"
+                android:layout_gravity="right"
+                android:layout_marginRight="25dp"
+                android:textSize="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="날짜와 시간을 입력해주세요*"
+                android:textSize="16dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:bufferType="spannable"
+                android:textColor="@color/black"
+                android:fontFamily="@font/worksans_light"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/sche_date"
+                    android:layout_width="130dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/edit_text"
+                    android:layout_weight="1"
+                    android:layout_marginTop="8dp"
+                    android:text="2023.07.29(토)"
+                    android:textColor="@color/black"
+                    />
+                <Button
+                    android:id="@+id/sche_time"
+                    android:layout_width="130dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/edit_text"
+                    android:layout_weight="1"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="8dp"
+                    android:text="시간을 선택해주세요"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="장소를 입력해주세요*"
+                android:textSize="16dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:bufferType="spannable"
+                android:textColor="@color/black"
+                android:fontFamily="@font/worksans_light"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sche_place"
+                android:hint="장소를 입력하세요."
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/worksans_light"
+                android:textSize="13dp"
+                android:inputType="text"
+                android:background="@drawable/edit_text"
+                android:layout_marginTop="8dp"
+                android:padding="11dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="구체적인 장소를 정하지 않았다면 지역구 등 대략적인 위치를 입력해주세요."
+                android:textColor="@color/black"
+                android:layout_gravity="right"
+                android:layout_marginRight="25dp"
+                android:textSize="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="모집 원하는 포지션이 있다면 입력해주세요"
+                android:textSize="16dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:bufferType="spannable"
+                android:textColor="@color/black"
+                android:fontFamily="@font/worksans_light"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sche_position"
+                android:hint="원하는 포지션을 입력하세요(선택)"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/worksans_light"
+                android:textSize="13dp"
+                android:inputType="text"
+                android:background="@drawable/edit_text"
+                android:layout_marginTop="8dp"
+                android:padding="11dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="활동에 대한 상세 설명을 입력해주세요"
+                android:textSize="16dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:bufferType="spannable"
+                android:textColor="@color/black"
+                android:fontFamily="@font/worksans_light"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:id="@+id/sche_content"
+                android:hint="활동에 대한 상세 설명을 입력해주세요(선택)"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/worksans_light"
+                android:textSize="13dp"
+                android:inputType="text"
+                android:background="@drawable/edit_text"
+                android:layout_marginTop="8dp"
+                android:padding="11dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="활동 관련 태그를 입력해주세요"
+                android:textSize="16dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:bufferType="spannable"
+                android:textColor="@color/black"
+                android:fontFamily="@font/worksans_light"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:id="@+id/sche_tag"
+                android:hint="활동 관련 태그를 입력해주세요(선택)"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/worksans_light"
+                android:textSize="13dp"
+                android:inputType="text"
+                android:background="@drawable/edit_text"
+                android:layout_marginTop="8dp"
+                android:padding="11dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

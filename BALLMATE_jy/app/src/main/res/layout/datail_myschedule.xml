@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
+            android:shadowColor="@color/white"
+            android:background="@android:color/transparent"
+            android:text="←"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+        <!--android:background="@android:color/transparent" <- 희미한 테두리가 있어서 이를 없애는 코드-->
+
+        <!--   그냥 빈 공간..!     -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/worksans_bold"
+            android:text="나의일정 세부사항"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
+            android:shadowColor="@color/white"
+            android:background="@android:color/transparent"
+            android:text="←"
+            android:textColor="#00ff0000"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#D2F0E4"
+        android:id="@+id/sche_name2"
+        app:layout_constraintTop_toBottomOf="@+id/topLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/sche_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/worksans_bold"
+            android:text="원호네 풋살모임"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#D2F0E4"
+        app:layout_constraintTop_toBottomOf="@+id/sche_name2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="장소"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:textSize="15dp"
+            android:fontFamily="@font/worksans_bold"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/text_palce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="한양대 운동장"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:textSize="15dp"
+            android:fontFamily="@font/worksans_light"
+            >
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#D2F0E4"
+        app:layout_constraintTop_toBottomOf="@+id/layout1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="날짜"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:fontFamily="@font/worksans_bold"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/text_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2023년 7월 29일 토요일"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:fontFamily="@font/worksans_light"
+            >
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#D2F0E4"
+        app:layout_constraintTop_toBottomOf="@+id/layout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시간"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:fontFamily="@font/worksans_bold"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13시 30분 ~ 15시 00분"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:fontFamily="@font/worksans_light"
+            >
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#D2F0E4"
+        app:layout_constraintTop_toBottomOf="@+id/layout3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="포지션"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:fontFamily="@font/worksans_bold"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/text_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="골키퍼"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:fontFamily="@font/worksans_light"
+            >
+        </TextView>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#D2F0E4"
+        app:layout_constraintTop_toBottomOf="@+id/layout4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일정 소개"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:fontFamily="@font/worksans_bold"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/text_intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="한양대 운동장에서 풋살하실분\n초보도 환영"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:fontFamily="@font/worksans_light"
+            >
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#D2F0E4"
+        app:layout_constraintTop_toBottomOf="@+id/layout5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingLeft="20dp"
+
+        >
+
+        <Button
+            android:id="@+id/btn_tag1"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/notification_button"
+            android:textColor="#000000"
+            android:text="#성별무관"
+            android:fontFamily="@font/worksans_light"
+            />
+
+        <Button
+            android:id="@+id/btn_tag2"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/notification_button"
+            android:textColor="#000000"
+            android:text="#초보가능"
+            android:fontFamily="@font/worksans_light"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#D2F0E4"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/layout6">
+
+        <Button
+            android:id="@+id/share_button"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/signup_button"
+            android:fontFamily="@font/worksans_bold"
+            android:padding="5dp"
+            android:text="수정하기"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/question_button"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/signup_button"
+            android:fontFamily="@font/worksans_bold"
+            android:text="삭제하기"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
